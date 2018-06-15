@@ -18,7 +18,6 @@ wp-activate.php
 wp-blog-header.php
 wp-comments-post.php
 wp-config-sample.php
-wp-config.php
 wp-cron.php
 wp-links-opml.php
 wp-load.php
@@ -28,7 +27,6 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 xmlrpc.php
-index.php
 index.html
 
 /.htaccess
