@@ -22,14 +22,4 @@
 </head>
 
 <body>
-		<? if(ot_get_option('header_logo_left')):?>
-			<a href="/"><img src="<?= ot_get_option('header_logo_left');?>" alt="logo"></a>
-		<?endif;?>
-
-		<? if(ot_get_option('header_text')):?>
-			<span><?=ot_get_option('header_text');?></span>
-		<? endif;?>
-
-		<? if(ot_get_option('header_logo_right')):?>
-			<a href="/"><img src="<?= ot_get_option('header_logo_right');?>" alt="logo"></a>
-		<?endif;?>
+	<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>

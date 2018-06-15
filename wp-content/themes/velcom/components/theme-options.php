@@ -54,6 +54,14 @@ function custom_theme_options() {
         'title'       => 'Слайдер'
       ),
       array(
+        'id'          => 'guide',
+        'title'       => 'Персональный гид'
+      ),
+      array(
+        'id'          => 'bloggers',
+        'title'       => 'Блогеры'
+      ),
+      array(
         'id'          => 'rules',
         'title'       => 'Правила'
       ),
@@ -162,6 +170,14 @@ function custom_theme_options() {
         'condition'   => '',
         'settings'    => array(
           array(
+            'id'          => 'card_text_added_show_on_off',
+            'label'       => 'Всегда показывать дополнительный текст',
+            'desc'        => '  ',
+            'std'         => 'off',
+            'type'        => 'on-off',
+            'section'     => 'slider'
+          ),
+          array(
             'id'          => 'card_icon',
             'label'       => 'Иконка слайда',
             'desc'        => '   ',
@@ -171,11 +187,1115 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'card_text',
-            'label'       => 'Текст слайда',
+            'label'       => 'Краткое описание слайда',
             'desc'        => '   ',
             'std'         => '',
-            'type'        => 'textarea',
+            'type'        => 'Textarea-simple',
             'section'     => 'slider'
+          ),
+          array(
+            'id'          => 'card_text_added',
+            'label'       => 'Подробное описание слайда',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'Textarea-simple',
+            'section'     => 'slider'
+          ),
+        )
+      ),
+
+      // guide
+      array(
+        'id'          => 'guide_title',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'guide'
+      ),
+      array(
+        'id'          => 'guide_text',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'Textarea',
+        'section'     => 'guide'
+      ),
+      array(
+        'id'          => 'guide_image',
+        'label'       => 'Изображение слева',
+        'desc'        => 'Загрузите изображение, которое будет отображаться слева от текста.',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'guide'
+      ),
+
+      // bloggers | blogger #1
+      array(
+        'id'          => 'blogger-1',
+        'label'       => 'Блогер #1',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-1',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-1',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-1',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-1',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-1',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-1',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-1',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-1',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-1',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-1',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-1',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-1',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #2
+      array(
+        'id'          => 'blogger-2',
+        'label'       => 'Блогер #2',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-2',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-2',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-2',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-2',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-2',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-2',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-2',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-2',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-2',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-2',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-2',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-2',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #3
+      array(
+        'id'          => 'blogger-3',
+        'label'       => 'Блогер #3',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-3',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-3',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-3',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-3',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-3',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-3',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-3',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-3',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-3',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-3',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-3',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-3',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #4
+      array(
+        'id'          => 'blogger-4',
+        'label'       => 'Блогер #4',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-4',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-4',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-4',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-4',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-4',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-4',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-4',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-4',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-4',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-4',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-4',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-4',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #5
+      array(
+        'id'          => 'blogger-5',
+        'label'       => 'Блогер #5',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-5',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-5',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-5',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-5',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-5',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-5',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-5',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-5',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-5',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-5',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-5',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-5',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #6
+      array(
+        'id'          => 'blogger-6',
+        'label'       => 'Блогер #6',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-6',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-6',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-6',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-6',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-6',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-6',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-6',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-6',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-6',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-6',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-6',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-6',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #7
+      array(
+        'id'          => 'blogger-7',
+        'label'       => 'Блогер #7',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-7',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-7',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-7',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-7',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-7',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-7',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-7',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-7',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-7',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-7',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-7',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-7',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #8
+      array(
+        'id'          => 'blogger-8',
+        'label'       => 'Блогер #8',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-8',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-8',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-8',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-8',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-8',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-8',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-8',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-8',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-8',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-8',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-8',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-8',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #9
+      array(
+        'id'          => 'blogger-9',
+        'label'       => 'Блогер #9',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-9',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-9',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-9',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-9',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-9',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-9',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-9',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-9',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-9',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-9',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-9',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-9',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+
+      // bloggers | blogger #10
+      array(
+        'id'          => 'blogger-10',
+        'label'       => 'Блогер #10',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-10',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-10',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_new_on_off-10',
+        'label'       => 'Сделать блогера "новым"',
+        'desc'        => '  ',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-10',
+        'label'       => 'Фото блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-10',
+        'label'       => 'Имя блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-10',
+        'label'       => 'Краткое описание блогера',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-10',
+        'label'       => 'Ссылка на соцсеть',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-10',
+        'label'       => 'Заголовок',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-10',
+        'label'       => 'Текст',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-10',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-10',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-10',
+            'label'       => 'Текст лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
           ),
         )
       ),
@@ -198,6 +1318,14 @@ function custom_theme_options() {
         'type'        => 'text'
       ),
       array(
+        'id'          => 'book_rules_mobile_icon',
+        'label'       => 'Изображение слева от правил приложения',
+        'desc'        => 'Загрузите изображение, которое будет отображаться слева от текста.',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'rules'
+      ),
+      array(
         'id'          => 'book_rules_card',
         'label'       => 'Правила использования виртуальной карты',
         'section'     => 'rules',
@@ -213,8 +1341,24 @@ function custom_theme_options() {
         'std'         => '',
         'type'        => 'text'
       ),
+      array(
+        'id'          => 'book_rules_card_icon',
+        'label'       => 'Изображение слева от правил карты',
+        'desc'        => 'Загрузите изображение, которое будет отображаться слева от текста.',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'rules'
+      ),
 
-    // footer      
+    // footer  
+      array(
+        'id'          => 'footer_text',
+        'label'       => 'Текст',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'footer'
+      ),    
       array(
         'id'          => 'footer_copiright',
         'label'       => 'Копирайт',
