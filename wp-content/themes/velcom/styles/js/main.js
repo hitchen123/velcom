@@ -139,6 +139,7 @@ $(document).ready(function(){
 
   $(document).on('click', '.bloger_wr', function(){ 
     TweenLite.set(".blogers");
+    TweenLite.set("footer");
     layout();
     // $(this).css('transition', 'width 1s') 
   });
@@ -148,7 +149,7 @@ $(document).ready(function(){
   //   layout();
   // });
 
-  var nodes = document.querySelectorAll(".bloger_wr");
+  var nodes = document.querySelectorAll(".bloger_wr, footer");
   var total = nodes.length;
   var ease  = Power1.easeInOut;
   var boxes = [];

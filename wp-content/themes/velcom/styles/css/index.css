@@ -919,6 +919,10 @@ footer{
 	.section_about__img{
 		width: 25%;
 	}
+	.section_about{
+		padding-bottom: 30px;
+		overflow: hidden;
+	}
 }
 
 @media screen and (max-width: 1100px) {
@@ -958,6 +962,7 @@ footer{
 	    padding-left: 52px;
 	    display: block;
 	}
+
 }
 
 
@@ -989,6 +994,7 @@ footer{
     	-o-animation: text_two 3s;
     	animation: text_two 3s;
 	}
+
 	.bloger__tips ul {
 	    padding: 20px 24px;
 	}
@@ -1101,7 +1107,7 @@ footer{
 	.section_about__img{
 		position: static;
 		width: 70%;
-    	margin: 50px 0 0 6%;
+    	margin: 50px 0 0 11%;
 	}
 	.section_about__content h1{
 		padding-top: 34px;
@@ -1267,6 +1273,7 @@ footer{
 @media only screen and (min-width : 1101px) {
 	.section_about__img {
 	    width: 22%;
+	    top: 20px;
 	}
 }
 @media only screen and (min-width : 1301px) {
@@ -1281,7 +1288,7 @@ footer{
 	    max-width: 84px;
 	}
 	.section_about__img {
-	    width: 25%;
+	    width: 24%;
 	}
 	.bloger_plus{
 		height: 780px;
@@ -1352,7 +1359,7 @@ footer{
 	}
 
 	.owl-carousel{
-		width: 58%;
+		width: 56%;
 	}
 	.slider__item .additional{
 		font-size: 20px;
