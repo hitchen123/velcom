@@ -210,7 +210,7 @@ function custom_theme_options() {
         'label'       => 'Заголовок',
         'desc'        => '   ',
         'std'         => '',
-        'type'        => 'text',
+        'type'        => 'textarea-simple',
         'section'     => 'guide'
       ),
       array(
