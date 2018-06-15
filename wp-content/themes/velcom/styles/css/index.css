@@ -688,7 +688,11 @@ footer{
 }
 
 .rights{
-	padding: 20px 0}
+	padding: 20px 0 0;
+    max-width: 610px;
+    margin: 0 auto;
+    clear: both;
+}
 
 .section_about{
 	padding-bottom: 100px;
@@ -820,7 +824,7 @@ footer{
 		width: 45%;
 	}
 	.rights{
-		padding: 10px 0 0 50px;
+		padding: 10px 0 0;
 		float: left;
 	}
 	.starting_section,
@@ -1041,6 +1045,9 @@ footer{
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+	footer{
+		padding: 20px 4% 15px;
+	}
 	.blogers{
 		width: 100%;
 		margin-top: 0;
@@ -1094,7 +1101,7 @@ footer{
 	.section_about__img{
 		position: static;
 		width: 70%;
-    	margin: 70px 0 0 6%;
+    	margin: 50px 0 0 6%;
 	}
 	.section_about__content h1{
 		padding-top: 34px;
@@ -1103,7 +1110,6 @@ footer{
 	.link_wr{
 		width: 230px;
 	    padding: 10px 0;
-	    margin: 0 auto;
 	    float: none;
 	    overflow: hidden;
 	}
@@ -1194,7 +1200,7 @@ footer{
 	    width: 170px;
 	}
 	.rights{
-		padding: 0;
+		padding: 15px 0;
 	}
 	.logo_next_page{
 	    float: right;
@@ -1244,8 +1250,9 @@ footer{
 	    height: 170px;
 	}
 	.content,
-	.bloger_wr{
-		padding: 0 2%;
+	.bloger_wr,
+	footer{
+		padding: 20px 2% 15px;
 	}
 	.bloger__about{
 		width: 47%;
