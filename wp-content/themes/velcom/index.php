@@ -2,6 +2,23 @@
 /**
  * Template name: Main
  */
+$ids = explode(',', $_COOKIE['blogger_new_on_off']);
+$names = array();
+
+$j = 1;
+
+while($j <= 10){
+	$published = ot_get_option('blogger_publish_on_off-' . $j);
+
+	if($published == 'on'){
+		$names[] = ot_get_option('blogger_card_name-' . $j);
+	}
+
+	$j++;
+}
+
+setcookie('blogger_new_on_off', implode(',', $names), time()+60*60*24*120);
+
 get_header();
 ?>
 	<section class="starting_section">
@@ -44,12 +61,12 @@ get_header();
 						<?if($slide['card_icon']):?>
 							<img src="<?=$slide['card_icon'];?>" alt="icon">
 						<?endif;?>
-						<span>
-							<?=str_ireplace(PHP_EOL,'<br>', $slide['card_text']);?>
-						</span>
-						<span class="additional">
-							(<?=$slide['card_text_added'];?>)
- 						</span>
+						<div>
+							<?=$slide['card_text'];?>
+						</div>
+						<div class="additional">
+							<?=$slide['card_text_added'];?>
+ 						</div>
  						<span class="close_slider"></span>
 					</a>
 				<?else:?>
@@ -57,13 +74,13 @@ get_header();
 						<?if($slide['card_icon']):?>
 							<img src="<?=$slide['card_icon'];?>" alt="icon">
 						<?endif;?>
-						<span>
-							<?=str_ireplace(PHP_EOL,'<br>', $slide['card_text']);?>
-						</span>
+						<div>
+							<?=$slide['card_text'];?>
+						</div>
 						<? if($slide['card_text_added_show_on_off'] == 'on'): ?>
-							<span class="additional additional_show">
-								(<?=$slide['card_text_added'];?>)
-	 						</span>
+							<div class="additional additional_show">
+								<?=$slide['card_text_added'];?>
+	 						</div>
 	 					<? endif; ?>
 					</div>
 				<?endif;?>
@@ -85,15 +102,23 @@ get_header();
 
 	<?	$i = 1;
 		$bloggers = array();
+
 		while($i <= 10){
 			$published = ot_get_option('blogger_publish_on_off-' . $i);
 
 			if($published == 'on'){
 				$position = ot_get_option('blogger_card_position-' . $i);
 
-				$bloggers[$position]['blogger_new_on_off'] = ot_get_option('blogger_new_on_off-' . $i);
+				if(!in_array(ot_get_option('blogger_card_name-' . $i), $ids))
+					$bloggers[$position]['blogger_new_on_off'] = true;
+				else
+					$bloggers[$position]['blogger_new_on_off'] = false;
+
 				$bloggers[$position]['blogger_card_image'] = ot_get_option('blogger_card_image-' . $i);
+				$bloggers[$position]['blogger_card_image_big'] = ot_get_option('blogger_card_image_big-' . $i);
 				$bloggers[$position]['blogger_card_name'] = ot_get_option('blogger_card_name-' . $i);
+				$bloggers[$position]['blogger_card_main_title_big'] = ot_get_option('blogger_card_main_title_big-' . $i);
+				$bloggers[$position]['blogger_card_name_big'] = ot_get_option('blogger_card_name_big-' . $i);
 				$bloggers[$position]['blogger_card_description'] = ot_get_option('blogger_card_description-' . $i);
 				$bloggers[$position]['blogger_card_social_link'] = ot_get_option('blogger_card_social_link-' . $i);
 				$bloggers[$position]['blogger_card_main_title'] = ot_get_option('blogger_card_main_title-' . $i);
@@ -111,19 +136,28 @@ get_header();
 			<div data-id="<? echo ($key + 1);?>" class="bloger_wr wow <? if(($key % 2) == 0): ?>slideInRight<? else: ?>slideInLeft<? endif; ?>">
 				<div class="blog_wr2">
 					<div class="bloger__photo-cut">
+						<? if($blogger['blogger_card_image_big']): ?>
+							<div class="bloger__photo" style="background-image: url(<?=$blogger['blogger_card_image_big'];?>)"></div>
+						<? endif; ?>
 						<? if($blogger['blogger_card_image']): ?>
-							<div class="bloger__photo" style="background-image: url(<?=$blogger['blogger_card_image'];?>)"></div>
+							<div class="bloger__photo_mob" style="background-image: url(<?=$blogger['blogger_card_image'];?>)"></div>
 						<? endif; ?>
 						<div class="layout_big"></div>
 						<img class="layout_small" src="/wp-content/themes/velcom/styles/images/blogger_mini.svg" alt="">
 					</div>
 					<div class="bloger__about">
+						<p class="name_open">
+							<a href="<?=$blogger['blogger_card_social_link'];?>" target="_blank" class="blog_link"><?=$blogger['blogger_card_name_big'];?></a>
+						</p>
 						<p class="name">
 							<?=$blogger['blogger_card_name'];?>
 						</p>
 						<p class="bloger__desc">
 							<?=$blogger['blogger_card_description'];?>
 						</p>
+						<h5 class="bloger__title_open">
+							<?=$blogger['blogger_card_main_title_big'];?>
+						</h5>
 						<h5 class="bloger__title">
 							<?=$blogger['blogger_card_main_title'];?>
 						</h5>
@@ -148,7 +182,7 @@ get_header();
 							</ul>
 						</div>
 					<? endif; ?>
-					<? if($blogger['blogger_new_on_off'] == 'on'): ?>
+					<? if($blogger['blogger_new_on_off']): ?>
 						<span class="new">new</span>
 					<? endif; ?>
 					<a href="#" class="bloger__close">закрыть</a>

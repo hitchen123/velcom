@@ -190,7 +190,7 @@ function custom_theme_options() {
             'label'       => 'Краткое описание слайда',
             'desc'        => '   ',
             'std'         => '',
-            'type'        => 'Textarea-simple',
+            'type'        => 'Textarea',
             'section'     => 'slider'
           ),
           array(
@@ -198,7 +198,7 @@ function custom_theme_options() {
             'label'       => 'Подробное описание слайда',
             'desc'        => '   ',
             'std'         => '',
-            'type'        => 'Textarea-simple',
+            'type'        => 'Textarea',
             'section'     => 'slider'
           ),
         )
@@ -254,24 +254,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-1',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-1',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-1',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-1',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-1',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-1',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-1',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -279,23 +295,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-1',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-1',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-1',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-1',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-1',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -303,10 +319,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-1',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -328,7 +344,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-1',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -340,7 +356,7 @@ function custom_theme_options() {
       // bloggers | blogger #2
       array(
         'id'          => 'blogger-2',
-        'label'       => 'Блогер #2',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -361,24 +377,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-2',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-2',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-2',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-2',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-2',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-2',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-2',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -386,23 +418,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-2',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-2',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-2',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-2',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-2',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -410,10 +442,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-2',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -435,7 +467,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-2',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -447,7 +479,7 @@ function custom_theme_options() {
       // bloggers | blogger #3
       array(
         'id'          => 'blogger-3',
-        'label'       => 'Блогер #3',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -468,24 +500,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-3',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-3',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-3',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-3',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-3',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-3',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-3',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -493,23 +541,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-3',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-3',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-3',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-3',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-3',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -517,10 +565,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-3',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -542,7 +590,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-3',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -554,7 +602,7 @@ function custom_theme_options() {
       // bloggers | blogger #4
       array(
         'id'          => 'blogger-4',
-        'label'       => 'Блогер #4',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -575,24 +623,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-4',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-4',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-4',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-4',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-4',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-4',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-4',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -600,23 +664,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-4',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-4',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-4',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-4',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-4',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -624,10 +688,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-4',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -649,7 +713,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-4',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -661,7 +725,7 @@ function custom_theme_options() {
       // bloggers | blogger #5
       array(
         'id'          => 'blogger-5',
-        'label'       => 'Блогер #5',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -682,24 +746,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-5',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-5',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-5',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-5',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-5',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-5',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-5',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -707,23 +787,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-5',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-5',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-5',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-5',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-5',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -731,10 +811,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-5',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -756,7 +836,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-5',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -768,7 +848,7 @@ function custom_theme_options() {
       // bloggers | blogger #6
       array(
         'id'          => 'blogger-6',
-        'label'       => 'Блогер #6',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -789,24 +869,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-6',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-6',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-6',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-6',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-6',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-6',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-6',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -814,23 +910,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-6',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-6',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-6',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-6',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-6',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -838,10 +934,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-6',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -863,7 +959,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-6',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -875,7 +971,7 @@ function custom_theme_options() {
       // bloggers | blogger #7
       array(
         'id'          => 'blogger-7',
-        'label'       => 'Блогер #7',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -896,24 +992,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-7',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-7',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-7',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-7',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-7',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-7',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-7',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -921,23 +1033,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-7',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-7',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-7',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-7',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-7',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -945,10 +1057,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-7',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -970,7 +1082,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-7',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -982,7 +1094,7 @@ function custom_theme_options() {
       // bloggers | blogger #8
       array(
         'id'          => 'blogger-8',
-        'label'       => 'Блогер #8',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -1003,24 +1115,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-8',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-8',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-8',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-8',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-8',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-8',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-8',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -1028,23 +1156,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-8',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-8',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-8',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-8',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-8',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -1052,10 +1180,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-8',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -1077,7 +1205,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-8',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -1089,7 +1217,7 @@ function custom_theme_options() {
       // bloggers | blogger #9
       array(
         'id'          => 'blogger-9',
-        'label'       => 'Блогер #9',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -1110,24 +1238,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-9',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-9',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-9',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-9',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-9',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-9',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-9',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -1135,23 +1279,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-9',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-9',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-9',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-9',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-9',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -1159,10 +1303,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-9',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -1184,7 +1328,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-9',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
@@ -1196,7 +1340,7 @@ function custom_theme_options() {
       // bloggers | blogger #10
       array(
         'id'          => 'blogger-10',
-        'label'       => 'Блогер #10',
+        'label'       => 'Блогер #1',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -1217,24 +1361,40 @@ function custom_theme_options() {
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_new_on_off-10',
-        'label'       => 'Сделать блогера "новым"',
-        'desc'        => '  ',
-        'std'         => 'off',
-        'type'        => 'on-off',
+        'id'          => 'blogger_card_name-10',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
         'id'          => 'blogger_card_image-10',
-        'label'       => 'Фото блогера',
+        'label'       => 'Изображение для карточки',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'upload',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_name-10',
-        'label'       => 'Имя блогера',
+        'id'          => 'blogger_card_main_title-10',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-10',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-10',
+        'label'       => 'Имя для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -1242,23 +1402,23 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_description-10',
-        'label'       => 'Краткое описание блогера',
-        'desc'        => '   ',
-        'std'         => '',
-        'type'        => 'textarea-simple',
-        'section'     => 'bloggers'
-      ),
-      array(
-        'id'          => 'blogger_card_social_link-10',
-        'label'       => 'Ссылка на соцсеть',
+        'label'       => 'Имя 2 для подробностей',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
         'section'     => 'bloggers'
       ),
       array(
-        'id'          => 'blogger_card_main_title-10',
-        'label'       => 'Заголовок',
+        'id'          => 'blogger_card_social_link-10',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-10',
+        'label'       => 'Подзаголовок h2',
         'desc'        => '   ',
         'std'         => '',
         'type'        => 'text',
@@ -1266,10 +1426,10 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'blogger_card_main_text-10',
-        'label'       => 'Текст',
+        'label'       => 'Описание для подробностей',
         'desc'        => '  ',
         'std'         => '',
-        'type'        => 'textarea-simple',
+        'type'        => 'Textarea-simple',
         'section'     => 'bloggers'
       ),
       array(
@@ -1291,7 +1451,7 @@ function custom_theme_options() {
           ),
           array(
             'id'          => 'blogger_card_list_text-10',
-            'label'       => 'Текст лайфхака',
+            'label'       => 'Описание для подробностей',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'textarea-simple',
