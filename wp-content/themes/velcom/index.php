@@ -16,7 +16,7 @@ while($j <= 10){
 
 	$j++;
 }
-
+// testtt
 setcookie('blogger_new_on_off', implode(',', $names), time()+60*60*24*120);
 
 get_header();
