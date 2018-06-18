@@ -1,55 +1,37 @@
-
-
-
-
 @font-face {
-  font-family: pf-bold;
+  /*font-family: pf-bold;*/
+  font-family: 'PFBagueSansPro';
   src: url('../fonts/PFBagueSansPro-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/PFBagueSansPro-Bold.otf')  format('opentype'),
 	     url('../fonts/PFBagueSansPro-Bold.woff') format('woff'), url('../fonts/PFBagueSansPro-Bold.ttf')  format('truetype'), url('../fonts/PFBagueSansPro-Bold.svg#PFBagueSansPro-Bold') format('svg');
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
 
-/*@font-face {
-	font-family:PFBagueSansPro-Medium;
-	src:url(../fonts/PFBagueSansPro-Medium.otf);
-}*/
-
-
 @font-face {
-  font-family: 'PFBagueSansPro-Medium';
+  font-family: 'PFBagueSansPro';
   src: url('../fonts/PFBagueSansPro-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/PFBagueSansPro-Medium.otf')  format('opentype'),
 	     url('../fonts/PFBagueSansPro-Medium.woff') format('woff'), url('../fonts/PFBagueSansPro-Medium.ttf')  format('truetype'), url('../fonts/PFBagueSansPro-Medium.svg#../fonts/PFBagueSansPro-Medium') format('svg');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
 
-/*@font-face {
-	font-family:PFBagueSansPro-Regular;
-	src:url(../fonts/PFBagueSansPro-Regular.otf);
-}*/
-
 @font-face {
-  font-family: 'PFBagueSansPro-Regular';
+  font-family: 'PFBagueSansPro';
   src: url('../fonts/PFBagueSansPro.eot?#iefix') format('embedded-opentype'),  url('../fonts/PFBagueSansPro.otf')  format('opentype'),
 	     url('../fonts/PFBagueSansPro.woff') format('woff'), url('../fonts/PFBagueSansPro.ttf')  format('truetype'), url('../fonts/PFBagueSansPro.svg#PFBagueSansPro') format('svg');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
-/*@font-face {
-	font-family:PFBagueSansPro-MediumItalic;
-	src:url(../fonts/PFBagueSansPro-MediumItalic.otf);
-}*/
 
 @font-face {
-  font-family: 'PFBagueSansPro-MediumItalic';
+  font-family: 'PFBagueSansPro';
   src: url('../fonts/PFBagueSansPro-MediumItalic.eot?#iefix') format('embedded-opentype'),  url('../fonts/PFBagueSansPro-MediumItalic.otf')  format('opentype'),
 	     url('../fonts/PFBagueSansPro-MediumItalic.woff') format('woff'), url('../fonts/PFBagueSansPro-MediumItalic.ttf')  format('truetype'), url('../fonts/PFBagueSansPro-MediumItalic.svg#PFBagueSansPro-MediumItalic') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 500;
+  font-style: italic;
 }
 
 
@@ -57,7 +39,9 @@ html,
 body{
 	width: 100%;
 	height: 100%;
-	font-family:PFBagueSansPro-Medium;
+	font-family:PFBagueSansPro;
+	font-weight: 500;
+  	font-style: normal;
 	-webkit-tap-highlight-color:transparent;
 	color: #023f52;
 	background-color: #3ec2d2;
@@ -114,17 +98,20 @@ section{
 
 .logo{
 	float: left;
+	max-width: 61px;
 }
 
 .logo_text{
 	float: left;
 	font-size: 18px;
-    line-height: 30px;
+    line-height: 21px;
     margin-left: 4%;
     text-transform: uppercase;
     width: 146px;
 	display: block;
-	font-family:PFBagueSansPro-MediumItalic;
+	/*font-family:PFBagueSansPro-MediumItalic;*/
+	font-weight: 500;
+  	font-style: italic;
 }
 
 h1{
@@ -132,7 +119,8 @@ h1{
 	font-size: 28px;
 	padding-bottom: 30px;
 	line-height: 56px;
-	font-family: pf-bold;
+	/*font-family: pf-bold;*/
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
@@ -140,7 +128,7 @@ h1{
 	font-size: 14px;
     line-height: 18px;
 	padding-bottom: 30px;
-	font-family:PFBagueSansPro-Medium;
+	/*font-family:PFBagueSansPro-Medium;*/
 }
 
 .download_wr{
@@ -302,8 +290,17 @@ ul{
     width: 94%;
 }
 
-.bloger_plus .bloger__photo {
+.bloger__photo_mob{
+	display: none;
+}
+
+.bloger_plus .bloger__photo{
+	display: none;
+}
+
+.bloger_plus .bloger__photo_mob {
 	margin-left: -2px;
+	display: block;
 }
 
 .bloger_wr{
@@ -345,7 +342,9 @@ ul{
 
 .bloger__profile,
 .bloger__profile_mob{
-	font-family:PFBagueSansPro-MediumItalic;
+	/*font-family:PFBagueSansPro-MediumItalic;*/
+	font-weight: 500;
+  	font-style: italic;
 }
 
 .bloger__tips li {
@@ -358,7 +357,9 @@ ul{
     line-height: 17px;
     box-sizing: border-box;
     position: relative;
-    font-family:PFBagueSansPro-MediumItalic;
+    /*font-family:PFBagueSansPro-MediumItalic;*/
+    font-weight: 500;
+  	font-style: italic;
 }
 
 .bloger__tips ul{
@@ -376,7 +377,7 @@ ul{
 	position: absolute;
 	left: 6px;
 	font-size: 24px;
-	font-family:PFBagueSansPro-Medium;
+	/*font-family:PFBagueSansPro-Medium;*/
 	top: 38px;
 }
 
@@ -421,7 +422,8 @@ ul{
 	width: 50%;
 	/*height: 100%;*/
 	font-size: 20px;
-	font-family: pf-bold;
+	/*font-family: pf-bold;*/
+	font-weight: bold;
 	padding-left: 12px;
     box-sizing: border-box;
     padding-top: 28px;
@@ -501,7 +503,9 @@ h5{
 	font-size: 26px;
 	line-height: 20px;
 	text-transform: uppercase;
-	font-family:PFBagueSansPro-MediumItalic;
+	/*font-family:PFBagueSansPro-MediumItalic;*/
+	font-weight: 500;
+  	font-style: italic;
 }
 
 .bloger__photo-cut{
@@ -515,7 +519,8 @@ h5{
 
 .layout_big,
 .layout_small,
-.bloger__photo{
+.bloger__photo,
+.bloger__photo_mob{
 	position: absolute;
 	height: 100%;
 	right: 0;
@@ -535,16 +540,19 @@ h5{
 	/*background-image: url(../images/blogger_mini.png);*/
 	/*width: 40%;*/
 	width: auto;
+	height: 102%;
+    margin-top: -1%;
 }
 
-.bloger__photo{
+.bloger__photo,
+.bloger__photo_mob{
 	background-image: url(../images/face.jpg);
 	-webkit-background-size: cover;
 	background-size: cover;
 	left: 0;
 }
 
-.bloger_plus .bloger__photo{
+.bloger_plus .bloger__photo_mob{
 	/*-webkit-animation: changing 2s ease;
 	-o-animation: changing 2s ease;
 	animation: changing 2s ease;*/
@@ -649,7 +657,7 @@ h5{
 
 .name,
 .bloger__desc{
-	font-family:PFBagueSansPro-Medium;
+	/*font-family:PFBagueSansPro-Medium;*/
 }
 
 .bloger_plus .name,
@@ -667,7 +675,9 @@ footer{
 	overflow: hidden;
 	padding: 24px 9%;
 	font-size: 12px;
-	font-family:PFBagueSansPro-Regular;
+	/*font-family:PFBagueSansPro-Regular;*/
+	font-weight: 400;
+ 	font-style: normal;
 }
 
 .link_wr{
@@ -680,17 +690,28 @@ footer{
 	max-width: 34px;
 }
 
+.link_wr:first-child img{
+	max-width: 21px;
+}
+
+.link_wr:nth-child(2){
+	padding-left: 3.5%;
+    box-sizing: border-box;
+}
+
 .link_wr a{
 	padding-left: 17px;
 	text-decoration: underline;
 	vertical-align: top;
-	font-family:PFBagueSansPro-Regular;
+	/*font-family:PFBagueSansPro-Regular;*/
+	font-weight: 400;
+  	font-style: normal;
 }
 
 .rights{
 	padding: 20px 0 0;
     max-width: 610px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     clear: both;
 }
 
@@ -698,10 +719,10 @@ footer{
 	padding-bottom: 100px;
 }
 
-.link_wr,
+/*.link_wr,
 footer{
 	text-align: center;
-}
+}*/
 
 .logo_next_page{
     float: left;
@@ -812,7 +833,8 @@ footer{
 		-webkit-background-size: cover;
 		background-size: cover;
 	}*/
-	.layout_big, .layout_small, .bloger__photo{
+	.layout_big, .layout_small, .bloger__photo,
+	.bloger__photo_mob{
 		max-width: 300px;
 	}
 	.link_wr,
@@ -980,7 +1002,8 @@ footer{
 	    height: 172px;
 	}
 	.layout_big, .layout_small, .bloger__photo,
-	.bloger__photo-cut {
+	.bloger__photo-cut,
+	.bloger__photo_mob {
 	    max-width: 170px;
 	    max-height: 180px;
 	}
@@ -1244,7 +1267,7 @@ footer{
 	}
 }
 @media screen and (max-width: 380px) {
-	.bloger_plus .bloger__photo {
+	.bloger_plus .bloger__photo_mob {
     	margin-left: -2px;
 	}
 }
@@ -1263,7 +1286,8 @@ footer{
 	.bloger__about{
 		width: 47%;
 	}
-	.layout_big, .layout_small, .bloger__photo, .bloger__photo-cut{
+	.layout_big, .layout_small, .bloger__photo, .bloger__photo-cut,
+	.bloger__photo_mob{
 		max-width: 166px;
 	}
 	.bloger_plus .bloger__about{
@@ -1280,18 +1304,22 @@ footer{
 	.slider__item {
 	    min-height: 184px;
 	}
+	footer{
+		padding-left: 8.6%;
+	}
 	.slider__item .additional {
 	    /*font-size: 12px;
 	    line-height: 12px;*/
 	}	
 	.logo {
-	    max-width: 84px;
+	    max-width: 61px;
 	}
 	.section_about__img {
 	    width: 24%;
 	}
 	.bloger_plus{
 		height: 780px;
+		width: 92%;
 	}
 	.bloger_plus .bloger__photo-cut{
 		height: 55%;
@@ -1384,7 +1412,8 @@ footer{
 	.bloger__tips span{
 		font-size: 30px;
 	}
-	.layout_big, .layout_small, .bloger__photo{
+	.layout_big, .layout_small, .bloger__photo,
+	.bloger__photo_mob{
 		max-width: 510px;
 	}
 	.bloger_plus .bloger__photo-cut{
@@ -1399,6 +1428,7 @@ footer{
 	}
 	.rights{
 		clear: both;
+		max-width: 1000px;
 	}
 	.content_middle p,
 	.section_about__content p,
