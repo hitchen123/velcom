@@ -442,10 +442,19 @@ ul{
 	padding-bottom: 10px;
 }
 
+.bloger__title_open{
+	display: none;
+}
+
 .bloger_plus .bloger__title{
+	display: none;
+}
+
+.bloger_plus .bloger__title_open{
 	padding-top: 27px;
     padding-bottom: 13px;
     line-height: 27px;
+    display: block;
 }
 
 .bloger__profile{
@@ -660,8 +669,20 @@ h5{
 	/*font-family:PFBagueSansPro-Medium;*/
 }
 
-.bloger_plus .name,
-.bloger_plus .bloger__title{
+.bloger_plus .name{
+	display: none;
+}
+
+.bloger_plus .name_open{
+	display: block;
+}
+
+.name_open{
+	display: none;
+}
+
+.bloger_plus .name_open,
+.bloger_plus .bloger__title_open{
 	font-size: 24px;
 }
 
@@ -1033,12 +1054,12 @@ footer{
 		display: none;
 	}
 	.bloger_plus .blogers,
-	.bloger_plus .name,
-	.bloger_plus .bloger__title,
+	.bloger_plus .name_open,
+	.bloger_plus .bloger__title_open,
 	.bloger_plus{
 		font-size: 14px;
 	}
-	.bloger_plus .name{
+	.bloger_plus .name_open{
 		width: 50%;
     	line-height: 20px;
 	}
@@ -1245,7 +1266,7 @@ footer{
      	padding-right: 10px; 
 		width: 40%;
 	}
-	.bloger_plus .bloger__title {
+	.bloger_plus .bloger__title_open {
 	    padding-top: 8px;
 	    line-height: 18px;
 	}
@@ -1362,7 +1383,7 @@ footer{
 	.download_wr img{
 		max-width: 240px;
 	}
-	.bloger_plus .bloger__title{
+	.bloger_plus .bloger__title_open{
 		padding-bottom: 24px;
 		line-height: 30px;
 	}
@@ -1419,7 +1440,7 @@ footer{
 	.bloger_plus .bloger__photo-cut{
 		height: 60%;
 	}
-	.bloger_plus .name, .bloger_plus .bloger__title{
+	.bloger_plus .name_open, .bloger_plus .bloger__title_open{
 		font-size: 30px;
 	}
 	.link_wr,
@@ -1476,7 +1497,7 @@ footer{
 	.bloger_plus .bloger__about{
 		width: 62%;
 	}
-	.bloger_plus .bloger__about  .name, .bloger_plus .bloger__title {
+	.bloger_plus .bloger__about  .name_open, .bloger_plus .bloger__title_open {
 	    font-size: 52px;
 	    line-height: 60px;
 	}
