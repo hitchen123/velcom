@@ -710,6 +710,7 @@ footer{
 .link_wr img{
 	max-height: 21px;
 	max-width: 34px;
+	float: left;
 }
 
 .link_wr:first-child img{

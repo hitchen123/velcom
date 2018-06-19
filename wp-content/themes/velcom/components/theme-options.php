@@ -169,14 +169,14 @@ function custom_theme_options() {
         'std'         => '',
         'condition'   => '',
         'settings'    => array(
-          array(
-            'id'          => 'card_text_added_show_on_off',
-            'label'       => 'Всегда показывать дополнительный текст',
-            'desc'        => '  ',
-            'std'         => 'off',
-            'type'        => 'on-off',
-            'section'     => 'slider'
-          ),
+          // array(
+          //   'id'          => 'card_text_added_show_on_off',
+          //   'label'       => 'Всегда показывать дополнительный текст',
+          //   'desc'        => '  ',
+          //   'std'         => 'off',
+          //   'type'        => 'on-off',
+          //   'section'     => 'slider'
+          // ),
           array(
             'id'          => 'card_icon',
             'label'       => 'Иконка слайда',
@@ -188,6 +188,14 @@ function custom_theme_options() {
           array(
             'id'          => 'card_text',
             'label'       => 'Краткое описание слайда',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'Textarea',
+            'section'     => 'slider'
+          ),
+          array(
+            'id'          => 'card_text_added_open',
+            'label'       => 'Подробное описание слайда (всегда показывается)',
             'desc'        => '   ',
             'std'         => '',
             'type'        => 'Textarea',
