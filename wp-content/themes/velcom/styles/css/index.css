@@ -99,6 +99,7 @@ section{
 .logo{
 	float: left;
 	max-width: 61px;
+	padding-top: 3px;
 }
 
 .logo_text{
@@ -885,7 +886,7 @@ footer{
 		width: 100%;
 	}
 	.logo{
-		max-width: 59px;
+		max-width: 60px;
     	padding: 3px 7px 0 0;
 	}
 	.content{
@@ -1242,6 +1243,12 @@ footer{
 	.link_wr img{
 		width: 58px;
 		float: left;
+	}
+	.link_wr:first-child img{
+		max-width: 45px;
+	}
+	.link_wr:nth-child(2){
+		padding-left: 0;
 	}
 	.link_wr a{
 		margin-left: 10px;
