@@ -16,10 +16,11 @@ $(document).ready(function(){
     }
   });
 
-  // owl.on('changed.owl.carousel', function(event) {
-  //   // console.log('heh')
+  owl.on('changed.owl.carousel', function(event) {
+    console.log('heh');
+    $('.slider__item').removeClass('not_hidden').addClass('hidden');
   //   ga('vbankingby.send', 'event', 'nav', 'scroll-advantage',);
-  // });
+  });
 
   new WOW().init();
 
