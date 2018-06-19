@@ -99,6 +99,7 @@ section{
 .logo{
 	float: left;
 	max-width: 61px;
+	padding-top: 3px;
 }
 
 .logo_text{
@@ -885,7 +886,7 @@ footer{
 		width: 100%;
 	}
 	.logo{
-		max-width: 59px;
+		max-width: 60px;
     	padding: 3px 7px 0 0;
 	}
 	.content{
