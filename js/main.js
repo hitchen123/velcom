@@ -19,33 +19,33 @@ $(document).ready(function(){
   owl.on('changed.owl.carousel', function(event) {
     console.log('heh');
     $('.slider__item').removeClass('not_hidden').addClass('hidden');
-  //   ga('vbankingby.send', 'event', 'nav', 'scroll-advantage',);
+    ga('vbankingby.send', 'event', 'nav', 'scroll-advantage',);
   });
 
   new WOW().init();
 
-  // $('.download_wr a').on('click', function(){
-  //   var target = $(this).data('target');
-  //   console.log(target)
-  //   ga('vbankingby.send', 'nav', 'go-market', target);
-  // });
+  $('.download_wr a').on('click', function(){
+    var target = $(this).data('target');
+    console.log(target)
+    ga('vbankingby.send', 'nav', 'go-market', target);
+  });
   
 
-  // $('.v-banking').on('click', function(){
-  //   ga('vbankingby.send', 'nav', 'go-about',);
-  // });
+  $('.v-banking').on('click', function(){
+    ga('vbankingby.send', 'nav', 'go-about',);
+  });
 
-  // $('.link_wr a').on('click', function(){
-  //   var id = $(this).data('id');
-  //   console.log(id)
-  //   ga('vbankingby.send', 'nav', 'go-rules', id);
-  // });
+  $('.link_wr a').on('click', function(){
+    var id = $(this).data('id');
+    console.log(id)
+    ga('vbankingby.send', 'nav', 'go-rules', id);
+  });
 
-  // $('.slider__item').on('click', function(){
-  //   var id = $(this).data('id');
-  //   console.log(id)
-  //   ga('vbankingby.send', 'nav', 'click-advantage', id);
-  // });
+  $('.slider__item').on('click', function(){
+    var id = $(this).data('id');
+    console.log(id)
+    ga('vbankingby.send', 'nav', 'click-advantage', id);
+  });
 
   
 
@@ -89,7 +89,7 @@ $(document).ready(function(){
 
     var id = $(this).data('id');
     console.log(id)
-    // ga('vbankingby.send', 'nav', 'click-blogger', id);
+    ga('vbankingby.send', 'nav', 'click-blogger', id);
 
   	// $('.bloger_wr').removeClass('bloger_plus')
 
