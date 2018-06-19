@@ -710,6 +710,7 @@ footer{
 .link_wr img{
 	max-height: 21px;
 	max-width: 34px;
+	float: left;
 }
 
 .link_wr:first-child img{
@@ -731,7 +732,7 @@ footer{
 }
 
 .rights{
-	padding: 20px 0 0 42px;
+	padding: 20px 0 0 38px;
     max-width: 610px;
     /*margin: 0 auto;*/
     clear: both;
@@ -868,7 +869,7 @@ footer{
 		width: 45%;
 	}
 	.rights{
-		padding: 10px 0 0 40px;
+		padding: 10px 0 0 38px;
 		float: left;
 	}
 	.starting_section,
