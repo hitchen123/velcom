@@ -356,7 +356,7 @@ function custom_theme_options() {
       // bloggers | blogger #2
       array(
         'id'          => 'blogger-2',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #2',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -479,7 +479,7 @@ function custom_theme_options() {
       // bloggers | blogger #3
       array(
         'id'          => 'blogger-3',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #3',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -602,7 +602,7 @@ function custom_theme_options() {
       // bloggers | blogger #4
       array(
         'id'          => 'blogger-4',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #4',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -725,7 +725,7 @@ function custom_theme_options() {
       // bloggers | blogger #5
       array(
         'id'          => 'blogger-5',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #5',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -848,7 +848,7 @@ function custom_theme_options() {
       // bloggers | blogger #6
       array(
         'id'          => 'blogger-6',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #6',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -971,7 +971,7 @@ function custom_theme_options() {
       // bloggers | blogger #7
       array(
         'id'          => 'blogger-7',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #7',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -1094,7 +1094,7 @@ function custom_theme_options() {
       // bloggers | blogger #8
       array(
         'id'          => 'blogger-8',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #8',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -1217,7 +1217,7 @@ function custom_theme_options() {
       // bloggers | blogger #9
       array(
         'id'          => 'blogger-9',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #9',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
@@ -1340,7 +1340,7 @@ function custom_theme_options() {
       // bloggers | blogger #10
       array(
         'id'          => 'blogger-10',
-        'label'       => 'Блогер #1',
+        'label'       => 'Блогер #10',
         'type'        => 'tab',
         'section'     => 'bloggers'
       ),
