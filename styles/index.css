@@ -731,7 +731,7 @@ footer{
 }
 
 .rights{
-	padding: 20px 0 0 38px;
+	padding: 20px 0 0 42px;
     max-width: 610px;
     /*margin: 0 auto;*/
     clear: both;
@@ -868,7 +868,7 @@ footer{
 		width: 45%;
 	}
 	.rights{
-		padding: 10px 0 0 38px;
+		padding: 10px 0 0 40px;
 		float: left;
 	}
 	.starting_section,
