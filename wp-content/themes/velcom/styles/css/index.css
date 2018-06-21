@@ -232,6 +232,9 @@ h1{
 /*.section_about__content ul */
 {
 	padding-top: 18px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
 }
 
 .section_about__img{
