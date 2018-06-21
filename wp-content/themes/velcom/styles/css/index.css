@@ -116,8 +116,7 @@ section{
 }
 
 h1{
-	/*font-size: 52px;*/
-	font-size: 28px;
+	font-size: 32px;
 	padding-bottom: 30px;
 	line-height: 56px;
 	/*font-family: pf-bold;*/
@@ -126,8 +125,8 @@ h1{
 }
 
 .content_middle p{
-	font-size: 14px;
-    line-height: 18px;
+	font-size: 18px;
+    line-height: 20px;
 	padding-bottom: 30px;
     font-weight: 400;
 	/*font-family:PFBagueSansPro-Medium;*/
@@ -233,7 +232,7 @@ h1{
 {
 	padding-top: 18px;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 20px;
 	font-weight: 400;
 }
 
