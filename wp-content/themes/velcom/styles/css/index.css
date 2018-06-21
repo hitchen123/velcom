@@ -194,6 +194,8 @@ h1{
     display: block;
     margin: 0 auto;
     box-sizing: border-box;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
