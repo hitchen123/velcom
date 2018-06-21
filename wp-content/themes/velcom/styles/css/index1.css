@@ -116,7 +116,8 @@ section{
 }
 
 h1{
-	font-size: 32px;
+	/*font-size: 52px;*/
+	font-size: 28px;
 	padding-bottom: 30px;
 	line-height: 56px;
 	/*font-family: pf-bold;*/
@@ -125,10 +126,9 @@ h1{
 }
 
 .content_middle p{
-	font-size: 18px;
-    line-height: 20px;
+	font-size: 14px;
+    line-height: 18px;
 	padding-bottom: 30px;
-    font-weight: 400;
 	/*font-family:PFBagueSansPro-Medium;*/
 }
 
@@ -194,8 +194,6 @@ h1{
     display: block;
     margin: 0 auto;
     box-sizing: border-box;
-    font-size: 16px;
-    line-height: 16px;
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
@@ -229,13 +227,10 @@ h1{
 	padding-top: 2px;
 }
 
-.section_about__content p, 
-.section_about__content ul
+.section_about__content p
+/*.section_about__content ul */
 {
 	padding-top: 18px;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 400;
 }
 
 .section_about__img{
@@ -258,11 +253,8 @@ ul{
 
 .section_about__content li{
  	list-style-position: outside;
-    margin-left: 18px;
-    padding-left: 1ex;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
+    margin-left: 14px;
+    padding-left: 10px;
 }
 
 .section_about__content ul{
@@ -747,8 +739,7 @@ footer{
 }
 
 .section_about{
-	padding-bottom: 142px;
-	min-height: 450px;
+	padding-bottom: 100px;
 }
 
 /*.link_wr,
@@ -917,7 +908,7 @@ footer{
 		font-size: 18px;
 	}
 	.content_middle p{
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 18px;
 	}
 	.download_wr{
@@ -944,8 +935,8 @@ footer{
 		width: 90%;
 		min-height: 125px;
 		padding: 9px 15px 12px;
-		font-size: 16px;
-		line-height: 16px;
+		font-size: 12px;
+		line-height: 15px;
 	}
 	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
 		height: 120px;
@@ -974,19 +965,15 @@ footer{
 		width: 30%;
 	}
 	.section_about{
-		padding-bottom: 100px;
+		padding-bottom: 30px;
 		overflow: hidden;
 	}
 }
 
 @media screen and (max-width: 1100px) {
 	.bg_img {
-    	left: 50%;
+    	left: 45%;
 	}
-    .owl-carousel {
-        width: 60%;
-	}
-    
 }
 
 @media screen and (max-width: 900px) {
@@ -1344,7 +1331,7 @@ footer{
 }
 @media only screen and (min-width : 1301px) {
 	.slider__item {
-	    min-height: 135px;
+	    min-height: 184px;
 	}
 	footer{
 		padding-left: 8.6%;
@@ -1356,9 +1343,9 @@ footer{
 	.logo {
 	    max-width: 61px;
 	}
-	.section_about__img {
+	/*.section_about__img {
 	    width: 30%;
-	}
+	}*/
 	.bloger_plus{
 		height: 780px;
 		width: 92%;
@@ -1412,15 +1399,7 @@ footer{
 		margin-left: 6px;
 	}
 }
-@media only screen and (min-width : 1401px) {
-    .slider__item {
-	    min-height: 165px;
-	}
-}
 @media only screen and (min-width : 1601px) {
-	.section_about{
-		min-height: 690px;
-	}
 	.bloger__tips li{
 		font-size: 24px;
     	line-height: 28px;
