@@ -257,8 +257,11 @@ ul{
 
 .section_about__content li{
  	list-style-position: outside;
-    margin-left: 14px;
-    padding-left: 10px;
+    margin-left: 18px;
+    padding-left: 1ex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
 }
 
 .section_about__content ul{
