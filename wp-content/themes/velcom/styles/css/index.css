@@ -228,8 +228,8 @@ h1{
 	padding-top: 2px;
 }
 
-.section_about__content p
-/*.section_about__content ul */
+.section_about__content p, 
+.section_about__content ul
 {
 	padding-top: 18px;
 	font-size: 16px;
