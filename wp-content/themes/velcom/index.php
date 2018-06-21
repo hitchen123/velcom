@@ -87,13 +87,13 @@ function multiDiff($array1, $array2){
 get_header();
 ?>
 	<section class="starting_section">
-		<div class="bg_img wow slideInRight"></div>
+		<div data-wow-duration=".5s" class="bg_img wow slideInRight"></div>
 		<img src="/wp-content/themes/velcom/styles/images/bg_img_mob.png" alt="" class="bg_img_mob">
 		<? if(ot_get_option('header_logo_right')):?>
-			<a href="/" class="visa wow slideInRight" target="_blank"><img src="<?= ot_get_option('header_logo_right');?>" alt="logo"></a>
+			<a data-wow-duration=".5s" href="/" class="visa wow slideInRight" target="_blank"><img src="<?= ot_get_option('header_logo_right');?>" alt="logo"></a>
 		<?endif;?>
 
-		<div class="content wow slideInLeft">
+		<div data-wow-duration=".5s" class="content wow slideInLeft">
 			<div class="logo_wr">
 				<? if(ot_get_option('header_logo_left')):?>
 					<a href="/" class="logo v-banking"><img src="<?= ot_get_option('header_logo_left');?>" alt="logo"></a>
@@ -118,7 +118,7 @@ get_header();
 			</div>
 		</div>
 
-		<div class="owl-carousel wow bounceInUp">
+		<div data-wow-duration=".5s" class="owl-carousel wow bounceInUp">
 			<? $slides = ot_get_option('cards');
 			foreach($slides as $key => $slide):?>
 				<?if($slide['card_text_added']):?>
@@ -159,7 +159,7 @@ get_header();
 
 	</section>
 
-	<section class="section_about wow bounceInUp">
+	<section data-wow-duration=".5s" class="section_about wow bounceInUp">
 		<div class="content section_about__content">
 			<h1><?=str_ireplace(PHP_EOL,'<br>', ot_get_option('guide_title'));?></h1>
 			<?=ot_get_option('guide_text');?>
@@ -208,7 +208,7 @@ get_header();
 	?>
 	<section class="blogers">
 		<? foreach ($bloggers as $key => $blogger): ?>
-			<div data-id="<? echo ($key + 1);?>" class="bloger_wr wow <? if(($key % 2) == 0): ?>slideInRight<? else: ?>slideInLeft<? endif; ?>">
+			<div data-wow-duration=".5s" data-id="<? echo ($key + 1);?>" class="bloger_wr wow <? if(($key % 2) == 0): ?>slideInRight<? else: ?>slideInLeft<? endif; ?>">
 				<div class="blog_wr2">
 					<div class="bloger__photo-cut">
 						<? if($blogger['blogger_card_image_big']): ?>

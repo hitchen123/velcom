@@ -237,7 +237,7 @@ $(document).ready(function(){
       var y = box.transform.y - lastY + box.y;  
       
       // Tween to 0,0 to remove the transforms
-      TweenLite.fromTo(box.node, 1, { x: x, y: y }, { x: 0, y: 0, ease: ease }); 
+      TweenLite.fromTo(box.node, 0.5, { x: x, y: y }, { x: 0, y: 0, ease: ease }); 
       box.y = lastY;
       // TweenLite.to($('.bloger_wr.bloger_plus'), 1,  {width:'100%'});   
     } 
