@@ -942,8 +942,8 @@ footer{
 		width: 90%;
 		min-height: 125px;
 		padding: 9px 15px 12px;
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 16px;
+		line-height: 18px;
 	}
 	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
 		height: 120px;
