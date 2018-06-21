@@ -1343,7 +1343,7 @@ footer{
 }
 @media only screen and (min-width : 1301px) {
 	.slider__item {
-	    min-height: 165px;
+	    min-height: 135px;
 	}
 	footer{
 		padding-left: 8.6%;
@@ -1409,6 +1409,11 @@ footer{
 	}
 	.section_about__content ul{
 		margin-left: 6px;
+	}
+}
+@media only screen and (min-width : 1401px) {
+    .slider__item {
+	    min-height: 135px;
 	}
 }
 @media only screen and (min-width : 1601px) {
