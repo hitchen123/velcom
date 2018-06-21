@@ -1419,7 +1419,7 @@ footer{
 }
 @media only screen and (min-width : 1601px) {
 	.section_about{
-		min-height: 670px;
+		min-height: 690px;
 	}
 	.bloger__tips li{
 		font-size: 24px;
