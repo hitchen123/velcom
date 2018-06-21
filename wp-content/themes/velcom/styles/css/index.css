@@ -749,7 +749,7 @@ footer{
 }
 
 .section_about{
-	min-height: 450px;
+	min-height: 380px;
 }
 
 /*.link_wr,
@@ -1344,6 +1344,9 @@ footer{
 	.bloger__title{
 		font-size: 24px;
 	}
+	.section_about{
+		min-height: 450px;
+	}
 	.content_middle p,
 	.section_about__content p,
 	.section_about__content li,
@@ -1377,7 +1380,7 @@ footer{
 		width: 92%;
 	}
 	.bloger_plus .bloger__photo-cut{
-		height: 46%;
+		height: 48%;
 	}
 	.bloger_plus .bloger__tips{
 		height: 54%;
