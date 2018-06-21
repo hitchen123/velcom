@@ -748,6 +748,7 @@ footer{
 
 .section_about{
 	padding-bottom: 142px;
+	min-height: 450px;
 }
 
 /*.link_wr,
@@ -1417,6 +1418,9 @@ footer{
 	}
 }
 @media only screen and (min-width : 1601px) {
+	.section_about{
+		min-height: 670px;
+	}
 	.bloger__tips li{
 		font-size: 24px;
     	line-height: 28px;
