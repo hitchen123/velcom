@@ -116,8 +116,7 @@ section{
 }
 
 h1{
-	/*font-size: 52px;*/
-	font-size: 28px;
+	font-size: 32px;
 	padding-bottom: 30px;
 	line-height: 56px;
 	/*font-family: pf-bold;*/
@@ -126,9 +125,10 @@ h1{
 }
 
 .content_middle p{
-	font-size: 14px;
-    line-height: 18px;
+	font-size: 18px;
+    line-height: 20px;
 	padding-bottom: 30px;
+    font-weight: 400;
 	/*font-family:PFBagueSansPro-Medium;*/
 }
 
@@ -194,6 +194,8 @@ h1{
     display: block;
     margin: 0 auto;
     box-sizing: border-box;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
@@ -227,10 +229,13 @@ h1{
 	padding-top: 2px;
 }
 
-.section_about__content p
-/*.section_about__content ul */
+.section_about__content p, 
+.section_about__content ul
 {
 	padding-top: 18px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
 }
 
 .section_about__img{
@@ -253,8 +258,11 @@ ul{
 
 .section_about__content li{
  	list-style-position: outside;
-    margin-left: 14px;
-    padding-left: 10px;
+    margin-left: 18px;
+    padding-left: 1ex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
 }
 
 .section_about__content ul{
@@ -908,7 +916,7 @@ footer{
 		font-size: 18px;
 	}
 	.content_middle p{
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 18px;
 	}
 	.download_wr{
@@ -935,8 +943,8 @@ footer{
 		width: 90%;
 		min-height: 125px;
 		padding: 9px 15px 12px;
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 16px;
+		line-height: 16px;
 	}
 	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
 		height: 120px;
@@ -972,8 +980,12 @@ footer{
 
 @media screen and (max-width: 1100px) {
 	.bg_img {
-    	left: 45%;
+    	left: 50%;
 	}
+    .owl-carousel {
+        width: 60%;
+	}
+    
 }
 
 @media screen and (max-width: 900px) {
@@ -1331,7 +1343,7 @@ footer{
 }
 @media only screen and (min-width : 1301px) {
 	.slider__item {
-	    min-height: 184px;
+	    min-height: 135px;
 	}
 	footer{
 		padding-left: 8.6%;
@@ -1397,6 +1409,11 @@ footer{
 	}
 	.section_about__content ul{
 		margin-left: 6px;
+	}
+}
+@media only screen and (min-width : 1401px) {
+    .slider__item {
+	    min-height: 165px;
 	}
 }
 @media only screen and (min-width : 1601px) {
