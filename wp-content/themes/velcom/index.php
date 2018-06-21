@@ -96,12 +96,12 @@ get_header();
 		<div data-wow-duration=".5s" class="content wow slideInLeft">
 			<div class="logo_wr">
 				<? if(ot_get_option('header_logo_left')):?>
-					<a href="/" class="logo v-banking"><img src="<?= ot_get_option('header_logo_left');?>" alt="logo"></a>
+					<a href="https://v-banking.by/about/index.html" class="logo v-banking"><img src="<?= ot_get_option('header_logo_left');?>" alt="logo"></a>
 				<?endif;?>
 				<? if(ot_get_option('header_text')):?>
-					<a href="/" class="logo_text v-banking"><?=ot_get_option('header_text');?></a>
+					<a href="https://v-banking.by/about/index.html" class="logo_text v-banking"><?=ot_get_option('header_text');?></a>
 				<? endif;?>
-				<a href="#" class="logo_next_page v-banking"><img src="/wp-content/themes/velcom/styles/images/arrow.svg" alt=""></a>
+				<a href="https://v-banking.by/about/index.html" class="logo_next_page v-banking"><img src="/wp-content/themes/velcom/styles/images/arrow.svg" alt=""></a>
 			</div>
 			<div class="content_middle">
 				<h1><?=ot_get_option('main_title');?></h1>
