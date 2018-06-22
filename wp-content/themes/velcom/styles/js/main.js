@@ -17,8 +17,9 @@ $(document).ready(function(){
   });
 
   owl.on('changed.owl.carousel', function(event) {
-    console.log('heh');
-    $('.slider__item').removeClass('not_hidden').addClass('hidden');
+    if ($('.slider__item').hasClass('not_hidden')){
+      $('.slider__item.not_hidden').removeClass('not_hidden').addClass('hidden');
+    }
     ga('vbankingby.send', 'event', 'nav', 'scroll-advantage',);
   });
 
@@ -63,14 +64,11 @@ $(document).ready(function(){
 
   function widthing() {
     var width3 = $('.bloger_wr.bloger_plus').width();
-    var height3= $('.bloger_wr.bloger_plus').height();
     var width1 = $('.bloger_wr:not(.bloger_plus)').width();
     var height1= $('.bloger_wr:not(.bloger_plus)').height();
+    var height3 = "auto";
     if ($(window).width() < 700) {
-        // height3 = $('.bloger_plus .bloger__photo-cut').outerHeight() + $('.bloger_plus .bloger__profile_mob').outerHeight() + $('.bloger_plus .bloger__tips').outerHeight();
         height3 = "auto"
-        // console.log(height3,$('.bloger_plus .bloger__photo-cut').outerHeight(), $('.bloger_plus .bloger__profile_mob').outerHeight(), $('.bloger_plus .bloger__tips').outerHeight())
-        // $(this).css('transition', 'padding .5s ease');
       }
     $('.blog_wr2').height(height1).width(width1);
     $('.bloger_plus .blog_wr2').height(height3).width(width3)  
@@ -105,24 +103,12 @@ $(document).ready(function(){
 
         $(this).addClass('bloger_plus');
         var width2 = $('.bloger_wr.bloger_plus').width();
-        var height2= $('.bloger_wr.bloger_plus').height();
-
-        if ($(window).width() < 700) {
-          height2 = $('.bloger_plus .bloger__photo-cut').outerHeight() + $('.bloger_plus .bloger__profile_mob').outerHeight() + $('.bloger_plus .bloger__tips').outerHeight()-50;
-          // $(this).css('transition', 'padding .5s ease');
-        }
+        height2 = "auto";
 
         $(this).children('.blog_wr2').height(height2).width(width2)
 
 
       } 
-    // }
-    // else{
-    //   // $('.blog_wr2').height('auto');
-    //   $(this).addClass('bloger_plus');
-    // }
-
-
   	  		
   });
 
@@ -144,11 +130,6 @@ $(document).ready(function(){
     layout();
     // $(this).css('transition', 'width 1s') 
   });
-
-  // $(document).on('click', '.b2', function(){  
-  //   TweenLite.set(".daddy", { width: 110 });
-  //   layout();
-  // });
 
   var nodes = document.querySelectorAll(".bloger_wr, footer");
   var total = nodes.length;
