@@ -424,6 +424,12 @@ ul{
 	height: 100%;*/
 }
 
+.blog_wr2:first-child{
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
 .name{
 	padding-bottom: 24px;
 }
