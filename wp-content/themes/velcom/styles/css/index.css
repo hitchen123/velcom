@@ -720,7 +720,6 @@ footer{
 	overflow: hidden;
 	padding: 24px 9%;
 	font-size: 12px;
-	/*font-family:PFBagueSansPro-Regular;*/
 	font-weight: 400;
  	font-style: normal;
 }
@@ -1382,6 +1381,13 @@ footer{
 		padding-top: 25px;
 	}
 }
+
+@media only screen and (min-width: 1365px) {
+    footer {
+        font-size: 14px;
+    }
+}
+
 @media only screen and (min-width : 1367px) {
 	.slider__item {
 	    min-height: 160px;
@@ -1401,7 +1407,7 @@ footer{
 	}
 	footer{
 		padding-left: 8.6%;
-		font-size: 18px;
+/*		font-size: 18px; */
 		line-height: 22px;
 	}
 	.slider__item .additional {
