@@ -17,8 +17,9 @@ $(document).ready(function(){
   });
 
   owl.on('changed.owl.carousel', function(event) {
-    console.log('heh');
-    $('.slider__item').removeClass('not_hidden').addClass('hidden');
+    if ($('.slider__item').hasClass('not_hidden')){
+      $('.slider__item.not_hidden').removeClass('not_hidden').addClass('hidden');
+    }
     // ga('vbankingby.send', 'event', 'nav', 'scroll-advantage',);
   });
 
@@ -63,9 +64,11 @@ $(document).ready(function(){
 
   function widthing() {
     var width3 = $('.bloger_wr.bloger_plus').width();
-    var height3= $('.bloger_wr.bloger_plus').height();
+    // var height3= $('.bloger_wr.bloger_plus').height();
+    // height3 = $('.bloger_plus .bloger__photo-cut').outerHeight()  + $('.bloger_plus .bloger__tips').height();
     var width1 = $('.bloger_wr:not(.bloger_plus)').width();
     var height1= $('.bloger_wr:not(.bloger_plus)').height();
+    var height3 = "auto";
     if ($(window).width() < 700) {
         // height3 = $('.bloger_plus .bloger__photo-cut').outerHeight() + $('.bloger_plus .bloger__profile_mob').outerHeight() + $('.bloger_plus .bloger__tips').outerHeight();
         height3 = "auto"
@@ -105,10 +108,13 @@ $(document).ready(function(){
 
         $(this).addClass('bloger_plus');
         var width2 = $('.bloger_wr.bloger_plus').width();
-        var height2= $('.bloger_wr.bloger_plus').height();
-
+        // var height2= $('.bloger_wr.bloger_plus').height();
+        // height2 = $('.bloger_plus .bloger__photo-cut').outerHeight() + $('.bloger_plus .bloger__tips').height();
+        height2 = "auto";
+        console.log($('.bloger_plus .bloger__photo-cut').outerHeight(), $('.bloger_plus .bloger__tips').height())
         if ($(window).width() < 700) {
-          height2 = $('.bloger_plus .bloger__photo-cut').outerHeight() + $('.bloger_plus .bloger__profile_mob').outerHeight() + $('.bloger_plus .bloger__tips').outerHeight()-50;
+          // height2 = $('.bloger_plus .bloger__photo-cut').outerHeight() + $('.bloger_plus .bloger__profile_mob').outerHeight() + $('.bloger_plus .bloger__tips').outerHeight()-50;
+          height2= "auto";
           // $(this).css('transition', 'padding .5s ease');
         }
 
@@ -116,11 +122,6 @@ $(document).ready(function(){
 
 
       } 
-    // }
-    // else{
-    //   // $('.blog_wr2').height('auto');
-    //   $(this).addClass('bloger_plus');
-    // }
 
 
   	  		
@@ -179,18 +180,12 @@ $(document).ready(function(){
       // Last offset position
       var lastX = box.x;
       var lastY = box.y;
-      if (i == 5){
-        console.log('item')
-      console.log(box.y)
-      }
+
       // Record new offset position
       box.x = box.node.offsetLeft;
       box.y = box.node.offsetTop;
       // Continue loop if box hasn't moved
-      if (i == 5){
-        console.log('item')
-      console.log(box.y)
-      }
+
       if (lastX === box.x && lastY === box.y) continue;
 
       
