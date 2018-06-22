@@ -1527,12 +1527,16 @@ footer{
 	    padding-bottom: 40px;
 	    padding-top: 0;
 	}
+	.section_about__content li{
+		padding-bottom: 0;
+	}
 	.section_about__content h1{
 		padding-bottom: 40px;
 	}
 	.slider__item{
 		font-size: 28px;
 		min-height: 226px;
+		line-height: 28px;
 	}
 	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
 		height: 226px;
@@ -1556,8 +1560,8 @@ footer{
 	}
 	.bloger_plus .bloger__about p {
 	    padding-bottom: 30px;
-	    font-size: 32px;
-	    line-height: 40px;
+	    font-size: 28px;
+	    line-height: 32px;
 	}
 	.bloger_plus .bloger__photo-cut{
 		margin-right: 2%;
@@ -1566,7 +1570,7 @@ footer{
 		width: 62%;
 	}
 	.bloger_plus .bloger__about  .name_open, .bloger_plus .bloger__title_open {
-	    font-size: 52px;
+	    font-size: 48px;
 	    line-height: 60px;
 	}
 	.close_slider{
