@@ -105,7 +105,7 @@ get_header();
 			</div>
 			<div class="content_middle">
 				<h1><?=ot_get_option('main_title');?></h1>
-				<? // =str_replace('<p', '<p data-wow-duration=".5s" class="wow slideInLeft"', ot_get_option('main_text'));?>
+				<?=ot_get_option('main_text');?>
 				<div data-wow-duration="3s" class="download_wr wow fadeIn">
 					<p><?=ot_get_option('download_text');?></p>
 					<? if(ot_get_option('apps_android')):?>
