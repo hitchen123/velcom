@@ -1577,8 +1577,12 @@ footer{
 	}
 	.slider__item{
 		font-size: 28px;
-		min-height: 226px;
+		min-height: 250px;
 		line-height: 28px;
+	}
+	.section_about__content h5{
+		padding-bottom: 40px;
+		padding-top: 0;
 	}
 	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
 		height: 226px;
