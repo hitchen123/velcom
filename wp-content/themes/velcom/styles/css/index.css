@@ -231,7 +231,7 @@ h1{
 }
 
 .blog_link{
-	text-decoration: underline dashed;
+	text-decoration: underline;
 }
 
 .section_about__content p, 
@@ -460,6 +460,11 @@ ul{
 
 .bloger_plus .bloger__about p{
 	padding-bottom: 10px;
+}
+
+.bloger__title {
+    display: inline;
+    border-bottom: 1px dashed;
 }
 
 .bloger__title_open{
