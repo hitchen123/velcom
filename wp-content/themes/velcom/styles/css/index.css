@@ -756,7 +756,7 @@ footer{
 }
 
 .section_about{
-	min-height: 380px;
+	min-height: 400px;
 }
 
 /*.link_wr,
@@ -1464,6 +1464,9 @@ footer{
 	}
 }
 @media only screen and (min-width : 1442px) {
+	.section_about {
+	    min-height: 500px;
+	}
     .slider__item {
 	    min-height: 180px;
 	    font-size: 20px;
