@@ -87,14 +87,14 @@ function multiDiff($array1, $array2){
 get_header();
 ?>
 	<section class="starting_section">
-		<div data-wow-duration=".5s" class="bg_img wow slideInRight"></div>
+		<div class="bg_img"></div>
 		<img src="/wp-content/themes/velcom/styles/images/bg_img_mob.png" alt="" class="bg_img_mob">
 		<? if(ot_get_option('header_logo_right')):?>
-			<a data-wow-duration=".5s" href="/" class="visa wow slideInRight" target="_blank"><img src="<?= ot_get_option('header_logo_right');?>" alt="logo"></a>
+			<a href="/" class="visa" target="_blank"><img src="<?= ot_get_option('header_logo_right');?>" alt="logo"></a>
 		<?endif;?>
 
 		<div class="content">
-			<div data-wow-duration=".5s" class="logo_wr wow slideInLeft">
+			<div class="logo_wr">
 				<? if(ot_get_option('header_logo_left')):?>
 					<a href="https://v-banking.by/about/index.html" class="logo v-banking"><img src="<?= ot_get_option('header_logo_left');?>" alt="logo"></a>
 				<?endif;?>
@@ -104,8 +104,8 @@ get_header();
 				<a href="https://v-banking.by/about/index.html" class="logo_next_page v-banking"><img src="/wp-content/themes/velcom/styles/images/arrow.svg" alt=""></a>
 			</div>
 			<div class="content_middle">
-				<h1 data-wow-duration=".5s" class="wow slideInLeft"><?=ot_get_option('main_title');?></h1>
-				<?=str_replace('<p', '<p data-wow-duration=".5s" class="wow slideInLeft"', ot_get_option('main_text'));?>
+				<h1><?=ot_get_option('main_title');?></h1>
+				<? // =str_replace('<p', '<p data-wow-duration=".5s" class="wow slideInLeft"', ot_get_option('main_text'));?>
 				<div data-wow-duration="3s" class="download_wr wow fadeIn">
 					<p><?=ot_get_option('download_text');?></p>
 					<? if(ot_get_option('apps_android')):?>
