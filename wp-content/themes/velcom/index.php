@@ -93,8 +93,8 @@ get_header();
 			<a data-wow-duration=".5s" href="/" class="visa wow slideInRight" target="_blank"><img src="<?= ot_get_option('header_logo_right');?>" alt="logo"></a>
 		<?endif;?>
 
-		<div data-wow-duration=".5s" class="content wow slideInLeft">
-			<div class="logo_wr">
+		<div class="content">
+			<div data-wow-duration=".5s" class="logo_wr wow slideInLeft">
 				<? if(ot_get_option('header_logo_left')):?>
 					<a href="https://v-banking.by/about/index.html" class="logo v-banking"><img src="<?= ot_get_option('header_logo_left');?>" alt="logo"></a>
 				<?endif;?>
@@ -104,9 +104,9 @@ get_header();
 				<a href="https://v-banking.by/about/index.html" class="logo_next_page v-banking"><img src="/wp-content/themes/velcom/styles/images/arrow.svg" alt=""></a>
 			</div>
 			<div class="content_middle">
-				<h1><?=ot_get_option('main_title');?></h1>
-				<?=ot_get_option('main_text');?>
-				<div class="download_wr">
+				<h1 data-wow-duration=".5s" class="wow slideInLeft"><?=ot_get_option('main_title');?></h1>
+				<?=str_replace('<p', '<p data-wow-duration=".5s" class="wow slideInLeft"', ot_get_option('main_text'));?>
+				<div data-wow-duration="3s" class="download_wr wow fadeIn">
 					<p><?=ot_get_option('download_text');?></p>
 					<? if(ot_get_option('apps_android')):?>
 						<a data-target="google" href="<?=ot_get_option('apps_android_link');?>" target="_blank"><img src="<?=ot_get_option('apps_android');?>" alt="app"></a>
@@ -222,7 +222,7 @@ get_header();
 					</div>
 					<div class="bloger__about">
 						<p class="name_open">
-							<a href="<?=$blogger['blogger_card_social_link'];?>" target="_blank" class="blog_link"><?=$blogger['blogger_card_name_big'];?></a>
+							<?=$blogger['blogger_card_name_big'];?>
 						</p>
 						<p class="name">
 							<?=$blogger['blogger_card_name'];?>
@@ -230,9 +230,9 @@ get_header();
 						<p class="bloger__desc">
 							<?=$blogger['blogger_card_description'];?>
 						</p>
-						<h5 class="bloger__title_open">
+						<a href="<?=$blogger['blogger_card_social_link'];?>" target="_blank" class="blog_link bloger__title_open">
 							<?=$blogger['blogger_card_main_title_big'];?>
-						</h5>
+						</a>
 						<h5 class="bloger__title">
 							<?=$blogger['blogger_card_main_title'];?>
 						</h5>
