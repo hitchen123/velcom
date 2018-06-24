@@ -42,7 +42,7 @@ $(document).ready(function(){
     ga('vbankingby.send', 'nav', 'go-rules', id);
   });
 
-  $('.slider__item').on('click', function(){
+  $('a.slider__item').on('click', function(){
     var id = $(this).data('id');
     console.log(id)
     ga('vbankingby.send', 'nav', 'click-advantage', id);
