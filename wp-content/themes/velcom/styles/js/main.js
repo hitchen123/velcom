@@ -42,20 +42,20 @@ $(document).ready(function(){
     ga('vbankingby.send', 'nav', 'go-rules', id);
   });
 
-  $('.slider__item').on('click', function(){
-    var id = $(this).data('id');
-    console.log(id)
-    ga('vbankingby.send', 'nav', 'click-advantage', id);
-  });
+  // $('.slider__item').on('click', function(){
+    
+  // });
 
   
 
   // ga('vbankingby.send', 'event', 'social', 'footer-email');
 
-  $('.slider__item').on('click', function(e){
+  $('a.slider__item').on('click', function(e){
     e.preventDefault();
     if ($(this).hasClass('hidden')){
       $(this).removeClass('hidden').addClass('not_hidden');
+      var id = $(this).data('id');
+      ga('vbankingby.send', 'nav', 'click-advantage', id);
     }
     else{
       $(this).addClass('hidden').removeClass('not_hidden');
