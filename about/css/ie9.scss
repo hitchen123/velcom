@@ -1,0 +1,137 @@
+.flex{
+  display: table;
+  vertical-align: top;
+  & > *{
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.mobile{
+  display: none;
+}
+
+#main{
+  .section{
+    &.s2{
+      .section-content{
+        .section-title{
+          .icon{
+            padding: 9px 50px 0 0;
+          }
+          .name{
+          }
+        }
+      }
+    }
+    &.s4{
+      .section-content{
+        .section-title{
+          .icon{
+            padding: 9px 50px 0 0;
+          }
+          .name{
+          }
+        }
+        .download-block{
+          .links{
+            vertical-align: middle;
+            li{
+              vertical-align: middle;
+              &:not(:last-child){
+                padding-right: 17px;
+              }
+            }
+          }
+        }
+        .manual-wrapper{
+          margin-left: auto;
+          .manual{
+            max-width: 655px;
+            padding-right: 110px;
+            .item{
+              .content-block-wrapper{
+                .content-block{
+                  &.links{
+                    vertical-align: middle;
+                    li{
+                      vertical-align: middle;
+                      &:not(:last-child){
+                        padding-right: 50px;
+                      }
+                    }
+                  }
+                  .line{
+                    vertical-align: middle;
+                    .field{
+                      &.pass{
+                        line-height: 29px;
+                      }
+                    }
+                    .hint{
+                      padding: 0 0 0 13px;
+                      vertical-align: middle;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .share-links{
+          vertical-align: middle;
+          .label{
+            vertical-align: middle;
+            padding: 0 15px 0 0;
+          }
+          .link{
+            display: table-cell;
+            vertical-align: middle;
+            &:not(:last-child){
+              padding: 0 9px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-container{
+    .menu-container{
+      .logo{
+        padding: 0 50px 0 0;
+      }
+      .menu{
+        li{
+          &:not(:last-child){
+            padding-right: 40px;
+          }
+        }
+      }
+    }
+    .content-wrapper{
+      .content-bottom{
+        width: 100%;
+        .app-block{
+          width: 200px;
+          .links{
+            li{
+              &:not(:last-child){
+                padding-right: 15px;
+              }
+            }
+          }
+        }
+        .certificate-link{
+          width: calc(100% - 200px);
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+#footer{
+  .blocks{
+    width: 100%;
+  }
+}
