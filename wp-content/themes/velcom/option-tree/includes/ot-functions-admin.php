@@ -47,8 +47,8 @@ if ( ! function_exists( 'ot_register_theme_options_page' ) ) {
               array(
                 'id'              => 'ot_theme_options',
                 'parent_slug'     => apply_filters( 'ot_theme_options_parent_slug', 'themes.php' ),
-                'page_title'      => apply_filters( 'ot_theme_options_page_title', __( 'Velcom', 'option-tree' ) ),
-                'menu_title'      => apply_filters( 'ot_theme_options_menu_title', __( 'Velcom', 'option-tree' ) ),
+                'page_title'      => apply_filters( 'ot_theme_options_page_title', __( 'velcom', 'option-tree' ) ),
+                'menu_title'      => apply_filters( 'ot_theme_options_menu_title', __( 'velcom', 'option-tree' ) ),
                 'capability'      => $caps = apply_filters( 'ot_theme_options_capability', 'edit_theme_options' ),
                 'menu_slug'       => apply_filters( 'ot_theme_options_menu_slug', 'ot-theme-options' ),
                 'icon_url'        => apply_filters( 'ot_theme_options_icon_url', OT_URL . 'assets/images/velcom_logo_admin.png' ),
