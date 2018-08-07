@@ -171,7 +171,9 @@ get_header();
 	</section>
 
 	<?	$i = 1;
-		$bloggers = array();
+        $bloggers = array();
+        $tempBloggers = array();
+		$positions = array();
 
 		while($i <= 10){
 			$published = ot_get_option('blogger_publish_on_off-' . $i);
@@ -180,31 +182,35 @@ get_header();
 				$position = ot_get_option('blogger_card_position-' . $i);
 
 
-				$bloggers[$position]['blogger_card_image'] = ot_get_option('blogger_card_image-' . $i);
-				$bloggers[$position]['blogger_card_image_big'] = ot_get_option('blogger_card_image_big-' . $i);
-				$bloggers[$position]['blogger_card_name'] = ot_get_option('blogger_card_name-' . $i);
-				$bloggers[$position]['blogger_card_main_title_big'] = ot_get_option('blogger_card_main_title_big-' . $i);
-				$bloggers[$position]['blogger_card_name_big'] = ot_get_option('blogger_card_name_big-' . $i);
-				$bloggers[$position]['blogger_card_description'] = ot_get_option('blogger_card_description-' . $i);
-				$bloggers[$position]['blogger_card_social_link'] = ot_get_option('blogger_card_social_link-' . $i);
-				$bloggers[$position]['blogger_card_main_title'] = ot_get_option('blogger_card_main_title-' . $i);
-				$bloggers[$position]['blogger_card_main_text'] = ot_get_option('blogger_card_main_text-' . $i);
-				$bloggers[$position]['bloggers_lifehacks'] = ot_get_option('bloggers_lifehacks-' . $i);
+				$tempBloggers[$i]['blogger_card_image'] = ot_get_option('blogger_card_image-' . $i);
+				$tempBloggers[$i]['blogger_card_image_big'] = ot_get_option('blogger_card_image_big-' . $i);
+				$tempBloggers[$i]['blogger_card_name'] = ot_get_option('blogger_card_name-' . $i);
+				$tempBloggers[$i]['blogger_card_main_title_big'] = ot_get_option('blogger_card_main_title_big-' . $i);
+				$tempBloggers[$i]['blogger_card_name_big'] = ot_get_option('blogger_card_name_big-' . $i);
+				$tempBloggers[$i]['blogger_card_description'] = ot_get_option('blogger_card_description-' . $i);
+				$tempBloggers[$i]['blogger_card_social_link'] = ot_get_option('blogger_card_social_link-' . $i);
+				$tempBloggers[$i]['blogger_card_main_title'] = ot_get_option('blogger_card_main_title-' . $i);
+				$tempBloggers[$i]['blogger_card_main_text'] = ot_get_option('blogger_card_main_text-' . $i);
+                $tempBloggers[$i]['bloggers_lifehacks'] = ot_get_option('bloggers_lifehacks-' . $i);
+				$tempBloggers[$i]['bloggers_position'] = $i;
+                $positions[$i] = $position;
 
 				if(is_array($ids)){
-					if(!count(array_diff($bloggers[$position], $ids[$position])) && !count(multiDiff($bloggers[$position]['bloggers_lifehacks'], $ids[$position]['bloggers_lifehacks'])))
-						$bloggers[$position]['blogger_new_on_off'] = false;
+					if(!count(array_diff($tempBloggers[$position], $ids[$position])) && !count(multiDiff($tempBloggers[$position]['bloggers_lifehacks'], $ids[$position]['bloggers_lifehacks'])))
+						$tempBloggers[$position]['blogger_new_on_off'] = false;
 					else
-						$bloggers[$position]['blogger_new_on_off'] = true;
+						$tempBloggers[$position]['blogger_new_on_off'] = true;
 				}else{
-					$bloggers[$position]['blogger_new_on_off'] = true;
+					$tempBloggers[$position]['blogger_new_on_off'] = true;
 				}
 			}
 
 			$i++;
 		}
 
-		ksort($bloggers);
+        foreach ($positions as $key => $value) {
+            $bloggers[] = $tempBloggers[$key];
+        }
 	?>
 	<section class="blogers">
 		<? foreach ($bloggers as $key => $blogger): ?>
@@ -243,20 +249,22 @@ get_header();
 					<div class="bloger__profile_mob">
 						<?=$blogger['blogger_card_main_text'];?>
 					</div>
+
 					<? if(count($blogger['bloggers_lifehacks'])): ?>
 						<div class="bloger__tips">
 							<ul>
 								<? foreach ($blogger['bloggers_lifehacks'] as $lifehack): ?>
-									<li>
-										<? if($lifehack['blogger_card_list_num-' . $key]): ?>
-											<span><?=$lifehack['blogger_card_list_num-' . $key];?></span>
+									<li>									
+										<? if($lifehack['blogger_card_list_num-' . $blogger['bloggers_position']]): ?>
+											<span><?=$lifehack['blogger_card_list_num-' . $blogger['bloggers_position']];?></span>
 										<? endif; ?>
-										<?=$lifehack['blogger_card_list_text-' . $key];?>
+										<?=$lifehack['blogger_card_list_text-' . $blogger['bloggers_position']];?>
 									</li>
 								<? endforeach; ?>
 							</ul>
 						</div>
 					<? endif; ?>
+
 					<? if($blogger['blogger_new_on_off']): ?>
 						<span class="new">new</span>
 					<? endif; ?>

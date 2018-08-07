@@ -295,6 +295,8 @@ ul{
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -ms-flexbox;
+    -ms-flex-pack: distribute;
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -570,6 +572,7 @@ h5{
 
 .layout_big{
 	background-image: url(../images/blogger.svg);
+	-ms-background-position-y: -60px;
 }
 
 .layout_small{
@@ -642,8 +645,8 @@ h5{
 
 .bloger_plus .layout_big{
 	opacity: 1;
-	left: 0;
-
+	left: -1px;
+	top: -1px;
 }
 
 .bloger_plus .layout_small{
@@ -891,6 +894,9 @@ footer{
 	.layout_big, .layout_small, .bloger__photo,
 	.bloger__photo_mob{
 		max-width: 300px;
+	}
+	.layout_big{
+		-ms-background-position-y: -45px;
 	}
 	.link_wr,
 	footer{
