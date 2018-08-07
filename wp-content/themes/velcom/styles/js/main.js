@@ -42,14 +42,6 @@ $(document).ready(function(){
     ga('vbankingby.send', 'nav', 'go-rules', id);
   });
 
-  // $('.slider__item').on('click', function(){
-    
-  // });
-
-  
-
-  // ga('vbankingby.send', 'event', 'social', 'footer-email');
-
   $('a.slider__item').on('click', function(e){
     e.preventDefault();
     if ($(this).hasClass('hidden')){
