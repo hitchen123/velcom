@@ -10,32 +10,63 @@ if(isset($_COOKIE['blogger_new_on_off']))
 	}
 else $ids = null;
 
+
+
 $info = array();
 
 $j = 1;
 
-while($j <= 10){
+while($j <= 12){
 	$published = ot_get_option('blogger_publish_on_off-' . $j);
 
 	if($published == 'on'){
 		$position = ot_get_option('blogger_card_position-' . $j);
 
-		$info[$position]['blogger_card_image'] = ot_get_option('blogger_card_image-' . $j);
-		$info[$position]['blogger_card_image_big'] = ot_get_option('blogger_card_image_big-' . $j);
-		$info[$position]['blogger_card_name'] = ot_get_option('blogger_card_name-' . $j);
-		$info[$position]['blogger_card_main_title_big'] = ot_get_option('blogger_card_main_title_big-' . $j);
-		$info[$position]['blogger_card_name_big'] = ot_get_option('blogger_card_name_big-' . $j);
-		$info[$position]['blogger_card_description'] = ot_get_option('blogger_card_description-' . $j);
-		$info[$position]['blogger_card_social_link'] = ot_get_option('blogger_card_social_link-' . $j);
-		$info[$position]['blogger_card_main_title'] = ot_get_option('blogger_card_main_title-' . $j);
-		$info[$position]['blogger_card_main_text'] = ot_get_option('blogger_card_main_text-' . $j);
-		$info[$position]['bloggers_lifehacks'] = ot_get_option('bloggers_lifehacks-' . $j);
+		$info[$j]['blogger_card_image'] = ot_get_option('blogger_card_image-' . $j);
+		$info[$j]['blogger_card_image_big'] = ot_get_option('blogger_card_image_big-' . $j);
+		$info[$j]['blogger_card_name'] = ot_get_option('blogger_card_name-' . $j);
+		$info[$j]['blogger_card_main_title_big'] = ot_get_option('blogger_card_main_title_big-' . $j);
+		$info[$j]['blogger_card_name_big'] = ot_get_option('blogger_card_name_big-' . $j);
+		$info[$j]['blogger_card_description'] = ot_get_option('blogger_card_description-' . $j);
+		$info[$j]['blogger_card_social_link'] = ot_get_option('blogger_card_social_link-' . $j);
+		$info[$j]['blogger_card_main_title'] = ot_get_option('blogger_card_main_title-' . $j);
+		$info[$j]['blogger_card_main_text'] = ot_get_option('blogger_card_main_text-' . $j);
+		$info[$j]['bloggers_lifehacks'] = ot_get_option('bloggers_lifehacks-' . $j);
+		$info[$j]['bloggers_position'] = $j;
 	}
 
 	$j++;
 }
 
 $content = serialize($info);
+
+// if($_GET['dev']){
+// 	error_reporting(E_ALL);
+// 	ini_set('display_errors', 1);
+// 	$kkkkk = 0;
+// 	if ($handle = opendir(dirname(__FILE__) . '/tmp')) {
+
+// 	    while (false !== ($entry = readdir($handle))) {
+
+// 	        if ($entry != "." && $entry != "..") {
+
+// 	        	chmod(dirname(__FILE__) . '/tmp/' . $entry, 0777);
+
+// 	        	if($kkkkk >= 27000 && $kkkkk < 29000){
+// 	        		// var_dump($entry);
+// 	            $fp = fopen(dirname(__FILE__) . '/tmp/' . $entry, "wb");
+// 				fwrite($fp, $content);
+// 				fclose($fp);
+// 			}
+
+// 			$kkkkk++;
+
+// 	        }
+// 	    }
+
+// 	    closedir($handle);
+// 	}
+// }
 
 if(!isset($_COOKIE['blogger_new_on_off'])){
 	$fileName = md5(uniqid(rand(), true));
@@ -51,6 +82,7 @@ if(!isset($_COOKIE['blogger_new_on_off'])){
 	fwrite($fp,$content);
 	fclose($fp);
 }
+
 
 function multiDiff($array1, $array2){
 	$difference = array();
@@ -175,7 +207,7 @@ get_header();
         $tempBloggers = array();
 		$positions = array();
 
-		while($i <= 10){
+		while($i <= 12){
 			$published = ot_get_option('blogger_publish_on_off-' . $i);
 
 			if($published == 'on'){
@@ -195,13 +227,14 @@ get_header();
 				$tempBloggers[$i]['bloggers_position'] = $i;
                 $positions[$i] = $position;
 
-				if(is_array($ids)){
-					if(!count(array_diff($tempBloggers[$position], $ids[$position])) && !count(multiDiff($tempBloggers[$position]['bloggers_lifehacks'], $ids[$position]['bloggers_lifehacks'])))
-						$tempBloggers[$position]['blogger_new_on_off'] = false;
+
+				if(isset($ids) && is_array($ids) && isset($ids[$i]) && is_array($ids[$i]) && is_array($tempBloggers) && isset($tempBloggers[$i]) && is_array($tempBloggers[$i])){
+					if(!count(array_diff($tempBloggers[$i], $ids[$i])) && !count(multiDiff($tempBloggers[$i]['bloggers_lifehacks'], $ids[$i]['bloggers_lifehacks'])))
+						$tempBloggers[$i]['blogger_new_on_off'] = false;
 					else
-						$tempBloggers[$position]['blogger_new_on_off'] = true;
+						$tempBloggers[$i]['blogger_new_on_off'] = true;
 				}else{
-					$tempBloggers[$position]['blogger_new_on_off'] = true;
+					$tempBloggers[$i]['blogger_new_on_off'] = true;
 				}
 			}
 

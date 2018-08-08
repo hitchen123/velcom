@@ -78,8 +78,6 @@ $(document).ready(function(){
   	$('.bloger__photo-cut').removeClass('photo_anim');
 
     var id = $(this).data('id');
-    console.log(id)
-    ga('vbankingby.send', 'nav', 'click-blogger', id);
 
   	// $('.bloger_wr').removeClass('bloger_plus')
 
@@ -89,6 +87,7 @@ $(document).ready(function(){
         console.log('heh')    
       } 
       else{
+        ga('vbankingby.send', 'nav', 'click-blogger', id);
       	$('.bloger_plus .bloger__photo-cut').addClass('photo_anim');
         $('.bloger_wr').removeClass('bloger_plus');
         widthing();
@@ -98,10 +97,13 @@ $(document).ready(function(){
         height2 = "auto";
 
         $(this).children('.blog_wr2').height(height2).width(width2)
-
-
       } 
   	  		
+  });
+
+  $(document).on('click', '.blog_link', function(e){
+  	var id = $(this).closest('.bloger_wr').data('id');
+    ga('vbankingby.send', 'nav', 'go-blogger-profile', id);
   });
 
   $(document).on('click','.bloger__close',function(e){
