@@ -20,7 +20,7 @@ $(document).ready(function(){
     if ($('.slider__item').hasClass('not_hidden')){
       $('.slider__item.not_hidden').removeClass('not_hidden').addClass('hidden');
     }
-    ga('vbankingby.send', 'event', 'nav', 'scroll-advantage',);
+    ga('vbankingby.send', 'event', 'nav', 'scroll-advantage');
   });
 
   new WOW().init();
@@ -33,7 +33,7 @@ $(document).ready(function(){
   
 
   $('.v-banking').on('click', function(){
-    ga('vbankingby.send', 'nav', 'go-about',);
+    ga('vbankingby.send', 'nav', 'go-about');
   });
 
   $('.link_wr a').on('click', function(){
