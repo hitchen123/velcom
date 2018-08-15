@@ -298,12 +298,19 @@ ul{
 	display: -ms-flexbox;
     -ms-flex-pack: distribute;
 	display: flex;
+	/*justify-content: space-around;*/
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	/*overflow: hidden;
 	position: relative;*/
 	margin: 34px auto 0;
     width: 94%;
+}
+
+@supports (-ms-ime-align:auto){
+	.blogers{
+		justify-content: space-around;
+	}
 }
 
 .bloger__photo_mob{
