@@ -241,6 +241,8 @@ get_header();
 			$i++;
 		}
 
+		asort($positions);
+		
         foreach ($positions as $key => $value) {
             $bloggers[] = $tempBloggers[$key];
         }
