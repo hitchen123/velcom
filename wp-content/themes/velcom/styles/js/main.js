@@ -28,7 +28,7 @@ $(document).ready(function(){
   $('.download_wr a').on('click', function(){
     var target = $(this).data('target');
     console.log(target)
-    ga('vbankingby.send', 'event', 'nav', 'go-market', target);
+    // ga('vbankingby.send', 'event', 'nav', 'go-market', target);
   });
   
 
