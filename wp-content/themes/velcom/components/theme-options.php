@@ -1713,6 +1713,250 @@ function custom_theme_options() {
           ),
         )
       ),
+      // bloggers | blogger #13
+      array(
+        'id'          => 'blogger-13',
+        'label'       => 'Блогер #13',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-13',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-13',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-13',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-13',
+        'label'       => 'Изображение для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-13',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-13',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-13',
+        'label'       => 'Имя для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-13',
+        'label'       => 'Имя 2 для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-13',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-13',
+        'label'       => 'Подзаголовок h2',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-13',
+        'label'       => 'Описание для подробностей',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'Textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-13',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-13',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-13',
+            'label'       => 'Описание для подробностей',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
+      // bloggers | blogger #14
+      array(
+        'id'          => 'blogger-14',
+        'label'       => 'Блогер #14',
+        'type'        => 'tab',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_position-14',
+        'label'       => 'Позиция',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_publish_on_off-14',
+        'label'       => 'Показать/скрыть блогера',
+        'desc'        => '  ',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name-14',
+        'label'       => 'Имя для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image-14',
+        'label'       => 'Изображение для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title-14',
+        'label'       => 'Описание для карточки',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_image_big-14',
+        'label'       => 'Изображение для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_name_big-14',
+        'label'       => 'Имя для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_description-14',
+        'label'       => 'Имя 2 для подробностей',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_social_link-14',
+        'label'       => 'Ссылка на профиль блогера в соцсети',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_title_big-14',
+        'label'       => 'Подзаголовок h2',
+        'desc'        => '   ',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'id'          => 'blogger_card_main_text-14',
+        'label'       => 'Описание для подробностей',
+        'desc'        => '  ',
+        'std'         => '',
+        'type'        => 'Textarea-simple',
+        'section'     => 'bloggers'
+      ),
+      array(
+        'label'       => 'Лайфхаки',
+        'id'          => 'bloggers_lifehacks-14',
+        'section'     => 'bloggers',
+        'type'        => 'list-item',
+        'desc'        => 'Можно перетягиванием поменять карточки местами. Поле title - название в списке.',
+        'std'         => '',
+        'condition'   => '',
+        'settings'    => array(
+          array(
+            'id'          => 'blogger_card_list_num-14',
+            'label'       => 'Номер лайфхака',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'text',
+            'section'     => 'bloggers'
+          ),
+          array(
+            'id'          => 'blogger_card_list_text-14',
+            'label'       => 'Описание для подробностей',
+            'desc'        => '   ',
+            'std'         => '',
+            'type'        => 'textarea-simple',
+            'section'     => 'bloggers'
+          ),
+        )
+      ),
 
       // rules
       array(

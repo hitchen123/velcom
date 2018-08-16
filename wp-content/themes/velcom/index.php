@@ -16,7 +16,7 @@ $info = array();
 
 $j = 1;
 
-while($j <= 12){
+while($j <= 14){
 	$published = ot_get_option('blogger_publish_on_off-' . $j);
 
 	if($published == 'on'){
@@ -207,7 +207,7 @@ get_header();
         $tempBloggers = array();
 		$positions = array();
 
-		while($i <= 12){
+		while($i <= 14){
 			$published = ot_get_option('blogger_publish_on_off-' . $i);
 
 			if($published == 'on'){
