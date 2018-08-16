@@ -28,18 +28,18 @@ $(document).ready(function(){
   $('.download_wr a').on('click', function(){
     var target = $(this).data('target');
     console.log(target)
-    ga('vbankingby.send', 'nav', 'go-market', target);
+    ga('vbankingby.send', 'event', 'nav', 'go-market', target);
   });
   
 
   $('.v-banking').on('click', function(){
-    ga('vbankingby.send', 'nav', 'go-about');
+    ga('vbankingby.send', 'event', 'nav', 'go-about');
   });
 
   $('.link_wr a').on('click', function(){
     var id = $(this).data('id');
     console.log(id)
-    ga('vbankingby.send', 'nav', 'go-rules', id);
+    ga('vbankingby.send', 'event', 'nav', 'go-rules', id);
   });
 
   $('a.slider__item').on('click', function(e){
@@ -47,7 +47,7 @@ $(document).ready(function(){
     if ($(this).hasClass('hidden')){
       $(this).removeClass('hidden').addClass('not_hidden');
       var id = $(this).data('id');
-      ga('vbankingby.send', 'nav', 'click-advantage', id);
+      ga('vbankingby.send', 'event', 'nav', 'click-advantage', id);
     }
     else{
       $(this).addClass('hidden').removeClass('not_hidden');
@@ -87,7 +87,7 @@ $(document).ready(function(){
         console.log('heh')    
       } 
       else{
-        ga('vbankingby.send', 'nav', 'click-blogger', id);
+        ga('vbankingby.send', 'event', 'nav', 'click-blogger', id);
       	$('.bloger_plus .bloger__photo-cut').addClass('photo_anim');
         $('.bloger_wr').removeClass('bloger_plus');
         widthing();
@@ -103,7 +103,7 @@ $(document).ready(function(){
 
   $(document).on('click', '.blog_link', function(e){
   	var id = $(this).closest('.bloger_wr').data('id');
-    ga('vbankingby.send', 'nav', 'go-blogger-profile', id);
+    ga('vbankingby.send', 'event', 'nav', 'go-blogger-profile', id);
   });
 
   $(document).on('click','.bloger__close',function(e){
